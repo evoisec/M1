@@ -76,7 +76,7 @@ public class KafkaSystemTool {
             System.out.println("The consumer performed SUBSCRIBE");
         }
 
-        System.out.println("Subscribed to topic " + topic);
+        System.out.println("Consuming from topic " + topic);
 
         int i = 0;
 
