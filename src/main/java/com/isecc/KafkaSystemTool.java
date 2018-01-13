@@ -8,6 +8,10 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.TopicPartition;
 
+// developer: Evo Eftimov
+// Swiss Army Knife tool for debugging Kafka projects and operations
+// this first version supports Offset Gap identification and analysis
+
 public class KafkaSystemTool {
 
     public static void main(String[] args) throws Exception {
@@ -22,6 +26,8 @@ public class KafkaSystemTool {
         long offsetVal = 2;
         String kerberosLogon = "s";
         String assign = "assign";
+
+        //To Do: more robust handling of input parameters
 
         if(args.length == 8){
 
