@@ -64,17 +64,16 @@ public class KafkaSystemTool {
             System.out.println("Will perform Kerberos Authentication");
         }
 
-
-        //System.out.printf("offset = %d", 2211111111111111113L);
-
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
 
         if (assign.equalsIgnoreCase("assign")){
             TopicPartition partition = new TopicPartition(topic, partitionIdx);
             consumer.assign(Arrays.asList(partition));
+            System.out.println("The consumer performed ASSIGN");
         }
         else{
             consumer.subscribe(Arrays.asList(topic));
+            System.out.println("The consumer performed SUBSCRIBE");
         }
 
         System.out.println("Subscribed to topic " + topic);
